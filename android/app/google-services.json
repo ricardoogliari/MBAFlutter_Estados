@@ -1,0 +1,126 @@
+{
+  "project_info": {
+    "project_number": "297616916149",
+    "project_id": "mbaflutter",
+    "storage_bucket": "mbaflutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297616916149:android:8139f82306e489108e88fc",
+        "android_client_info": {
+          "package_name": "com.estudos.flutter_app_aula2_banco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297616916149-6582f96u5fhn5o3r500bdajk3anpafov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOYP6dncVpZvK5uXe3Rl3tluxFnx0Nfic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "297616916149-6582f96u5fhn5o3r500bdajk3anpafov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297616916149:android:c3150e10e9dbc1208e88fc",
+        "android_client_info": {
+          "package_name": "com.estudos.flutter_app_estados_push"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297616916149-6582f96u5fhn5o3r500bdajk3anpafov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOYP6dncVpZvK5uXe3Rl3tluxFnx0Nfic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "297616916149-6582f96u5fhn5o3r500bdajk3anpafov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297616916149:android:e4bd944d2c965ee68e88fc",
+        "android_client_info": {
+          "package_name": "com.estudos.flutter_app_pufh_fcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297616916149-6582f96u5fhn5o3r500bdajk3anpafov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOYP6dncVpZvK5uXe3Rl3tluxFnx0Nfic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "297616916149-6582f96u5fhn5o3r500bdajk3anpafov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297616916149:android:d940f8037b1ed7528e88fc",
+        "android_client_info": {
+          "package_name": "ogliari.flutter.flutter_fiap_aula_2_bd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297616916149-6582f96u5fhn5o3r500bdajk3anpafov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOYP6dncVpZvK5uXe3Rl3tluxFnx0Nfic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "297616916149-6582f96u5fhn5o3r500bdajk3anpafov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
