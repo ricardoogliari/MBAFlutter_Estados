@@ -16,10 +16,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ChangeNotifierProvider(
+      /*home: ChangeNotifierProvider(
         create: (context) => PaymentControllerProvider(),
         child: ListPaymentPage(),
-      ),
+      ),*/ //com provider
+      home: ListPaymentPage() //com mobx
     );
   }
 }
