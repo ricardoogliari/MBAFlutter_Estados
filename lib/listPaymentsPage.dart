@@ -1,37 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_estados_push/firebaseNotifications.dart';
 import 'package:flutter_app_estados_push/model/payment.dart';
+import 'package:flutter_app_estados_push/provider/paymentControllerProvider.dart';
+import 'package:provider/provider.dart';
 
-class ListPaymentPage extends StatefulWidget {
+class ListPaymentPage extends StatelessWidget {
 
-  @override
-  _ListPaymentPageState createState() => _ListPaymentPageState();
-
-}
-
-class _ListPaymentPageState extends State<ListPaymentPage> {
-
-  List<Payment> payments = [];
-
-  @override
-  void initState() {
-    super.initState();
-    new FirebaseNotifications(useMessage).setUpFirebase();
-  }
-
-  void useMessage(Payment payment){
-    setState(() {
-      payments.add(payment);
-    });
-  }
+  List<Payment> payments;
 
   @override
   Widget build(BuildContext context) {
+    new FirebaseNotifications(context).setUpFirebase();
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Contas a pagar"),
       ),
-      body: payments.length == 0 ? showEmptyPayment() : showWithPayments,
+      body: Consumer<PaymentControllerProvider>(
+        builder: (context, controller, child) {
+          payments = controller.items;
+          return controller.items.length == 0 ? showEmptyPayment() : showWithPayments();
+        },
+      ),
     );
   }
 
@@ -46,11 +36,12 @@ class _ListPaymentPageState extends State<ListPaymentPage> {
   );
 
   Widget showWithPayments() => Row(
-    mainAxisSize: MainAxisSize.max,
     children: [
-      DataTable(
-        columns: getColumns,
-        rows: getRows(),
+      Expanded(
+        child: DataTable(
+          columns: getColumns,
+          rows: getRows(),
+        ),
       ),
     ],
   );
@@ -88,11 +79,6 @@ class _ListPaymentPageState extends State<ListPaymentPage> {
               DataCell(Text(element.place)),
               DataCell(Text("${element.value}")),
             ],
-            onSelectChanged: (value) {
-              setState(() {
-                element.selected = value;
-              });
-            },
           )
       );
     });

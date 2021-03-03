@@ -1,13 +1,20 @@
 import 'dart:io';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_app_estados_push/model/payment.dart';
+import 'package:flutter_app_estados_push/provider/paymentControllerProvider.dart';
+import 'package:provider/provider.dart';
 
 class FirebaseNotifications {
 
   FirebaseMessaging _firebaseMessaging;
 
-  final void Function(Payment) callback;
-  FirebaseNotifications(this.callback);
+  final BuildContext context;
+  PaymentControllerProvider controller;
+
+  FirebaseNotifications(this.context){
+    controller = Provider.of<PaymentControllerProvider>(context, listen: false);
+  }
 
   void setUpFirebase() {
     _firebaseMessaging = FirebaseMessaging();
@@ -25,7 +32,7 @@ class FirebaseNotifications {
       onMessage: (Map<String, dynamic> message) async {
         print("on message $message");
         Payment payment = Payment.fromJson(message);
-        callback(payment);
+        controller.add(payment);
       },
       onResume: (Map<String, dynamic> message) async {},
       onLaunch: (Map<String, dynamic> message) async {},
